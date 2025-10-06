@@ -1,24 +1,119 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <title>Первый сайт</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="reset.css"/>
+        <link rel="stylesheet" href="./main.css"/>
     </head>
+
     <body>
-        <div>
-            <h1>Гагаркина Тая</h1>
-            <img
-                src="https://lapkins.ru/upload/uf/e0c/e0c6bbe5299a0e2aa915c4e214defb8e.jpg"
-                alt="Сфинкс!"
-            />
-            <p>Вещи, которые мне нравятся</p>
-            <ul>
-                <li>Пить кофе</li>
-                <li>Смотреть сериалы</li>
-            </ul>
-            <p>Напишите мне</p>
-            <input type="text" placeholder="Ваше имя" />
-            <br />
-            <button>Отправить</button>
+
+        <header class="panel">
+            <nav>
+                <ul>
+                    <li><a href="#first">О себе</a></li>
+                    <li><a href="#second">Хобби</a></li>
+                    <li><a href="#third">Путешествия</a></li>
+                    <li><a href="#fourth">Мечты</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="mainpage">
+
+            <div class="center">
+                <section id="first">О себе</section>
+            </div>
+                <div class="about_me1">
+                <h1>Меня зовут Тая Гагаркина.</h1>
+                <p>Я начинающий фронтенд-разработчик.</p>
+            </div>
+            <div class="about_me2">
+                <p>Я хочу развиваться в IT, но пока не могу определиться с направлением.</p>
+                <p>Иногда тянет к веб-разработке, иногда — к созданию мобильных приложений, дизайну,</p>
+                <p>3D-анимации или даже разработке игр. Я ищу себя в этой сфере</p>
+                <p>и хочу попробовать всё, чтобы понять, что вдохновляет больше всего.</p>
+            </div>
+            <div class="photos_for_about_me">
+                <img src="img/firstimg.jpg">
+                <img src="img/secondimg.jpg">
+                <img src="img/thirdimg.jpg">
+            </div>
+
+            <section id="second">Хобби</section>
+            <div class="hobby">
+                <div class="under_block">
+                    <p>Искусство</p>
+                    <p class="small_text_draw">
+                        С трёх лет я ходила на занятия по рисованию, и именно тогда появилось моё увлечение искусством. Позже я поступила в художественную школу и закончила её с красным дипломом. Долгое время я даже думала связать свою жизнь с дизайном или архитектурой. Искусство по-прежнему занимает особое место в моей жизни — не могу представить себя без творчества.
+                    </p>
+                    <p>Танцы</p>
+                    <p class="small_text_dance">
+                        Мой путь в танцах начался с самого раннего возраста. Сначала я занималась хореографией, позже меня отправили на латиноамериканские танцы, а потом я открыла для себя контемпорари. Последние несколько лет я занималась джаз-фанком — стилем, который объединяет разные современные направления, от хип-хопа до вога.
+                    </p>
+                    <p>Serialoholic</p>
+                    <p class="small_text_serial">
+                        Когда мой список сериалов перевалил за сотню, я перестала считать и записывать, что уже посмотрела. Люблю сериалы и смотрю их где-угодно и когда-угодно. Дома, за едой, в метро, на парах, в машине, в самолете, перед сном и во время абсолютно любых сборов. Если я не отвечаю вам — значит, вы отправили не самое интригующее сообщение, чтобы я отвлеклась от очередной серии :)
+                    </p>
+                    <p>Пить кофе</p>
+                    <p class="small_text_coffee">
+                        Можно, пожалуйста, раф на банановом с лесным орехом или айс-капучино с каштановым сиропом..
+                    </p>
+                </div>
+            </div>
+
+            <section id="third">Путешествия</section>
+            <div class="travels">
+                <h2>Цель: побывать в каждом уголке мира</h2>
+            </div>
+            <div class="country_block">
+                <div class="photos_for_travels">
+                    <img src="img/turkey1img.jpg">
+                    <img src="img/turkey2img.jpg">
+                    <img src="img/bulgaria1img.jpg">
+                    <img src="img/bulgaria2img.jpg">
+                    <img src="img/thai1img.jpg">
+                    <img src="img/thai2img.jpg">
+                </div>
+            </div>
+            <div class="small_text_travels">
+                Я побывала в таких прекрасных местах как: Турция, Болгария, Таиланд, Греция, Египет, Испания, Франция, Чехия, Германия, Кипр, Майорка, Тенерифе, Украина, Казахстан, Киргизия. И это только начало. Список стран, где я оставлю свой след, будет только расти!
+            </div>
+
+            <section id="fourth">Мечты</section>
+            <div class="columns">
+                <div class="column">
+                    <h3 class="dream_title">Завести сфинкса</h3>
+                    <div class="small_text_dreams">
+                        Осуждаю всех, кому не нравятся сфинксы. Самые красивые и милые создания во всем человечестве!!!
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 class="dream_title">Пожить у моря</h3>
+                    <div class="small_text_dreams">
+                        Хочу жить на берегу у моря — всегда свежий воздух, пляж рядом, купайся когда только вздумается. Просыпаешься под шум волн, ужинаешь с видом на закат..
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 class="dream_title">Побывать в Азии</h3>
+                    <div class="small_text_dreams">
+                        Когда-нибудь я обязательно окажусь там и буду пробовать азиатскую еду, изучать архитектуру, любоваться природой и кормить милых панд, оленей и других чудесных существ!
+                    </div>
+                </div>
+            </div>
+            
+            <footer class="bottom_panel">
+                <ul>
+                    <li>Telegram: @taaayaaaa</li>
+                    <li>Instagram: xpuwie</li>
+                    <li>Gmail: gagarkina.taya@gmail.com</li>
+                </ul>
+            </footer>
+
         </div>
     </body>
 </html>
