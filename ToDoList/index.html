@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TODOLIST</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+		<link href="styles/reset.css" rel="stylesheet" />
+		<link href="styles/index.css" rel="stylesheet" />
+		<script src="scripts/index.js" defer></script>
+	</head>
+	<body>
+		<main class="todo">
+			<h1 class="todo__title">TODO LIST</h1>
+            <form class="todo__form" id="todo-form">
+                <input class="todo__search" type="text" placeholder="Search note..."/>
+                <button class="todo__add" type="submit">Add</button>
+            </form>
+            <ul class="todo__list" id="todo-list"></ul>
+		</main>
+	</body>
+</html>
