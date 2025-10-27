@@ -1,0 +1,45 @@
+[{
+    "id": 1,
+    "title": "Desperate Housewives",
+    "description": "The lives of a group of suburban women turn out to be full of secrets, intrigues, and unexpected darkly comic twists."
+}, {
+    "id": 2,
+    "title": "Sherlock",
+    "description": "A modern take on the sharp-minded detective who, together with Dr. Watson, investigates complex crimes in London."
+}, {
+    "id": 3,
+    "title": "SKAM",
+    "description": "A group of Norwegian high school students navigates friendship, identity, love, and social pressure, with each season told from one character’s perspective."
+}, {
+    "id": 4,
+    "title": "Lucifer",
+    "description": "The Devil decides to take a break from Hell, moves to Los Angeles, opens a nightclub, and helps the police solve crimes."
+}, {
+    "id": 5,
+    "title": "Money Heist",
+    "description": "A group of robbers led by the mysterious Professor carries out a meticulously planned heist on the Royal Mint of Spain."
+}, {
+    "id": 6,
+    "title": "Elite",
+    "description": "Students at an exclusive private school face social inequality, secrets, and crimes that change their lives forever."
+}, {
+    "id": 7,
+    "title": "Suits",
+    "description": "A brilliant but unlicensed lawyer starts working at a prestigious law firm while hiding his past."
+}, {
+    "id": 8,
+    "title": "Gossip Girl",
+    "description": "A mysterious blogger exposes the secrets of wealthy and influential Manhattan teens, disrupting their lives and relationships."
+}, {
+    "id": 9,
+    "title": "How to Get Away with Murder",
+    "description": "A brilliant law professor and her students become entangled in a complex murder case where everyone has something to hide."
+}, {
+    "id": 10,
+    "title": "Shameless",
+    "description": "A large family struggles to survive as each member deals with poverty, their reckless father, and the chaos of everyday life."
+}, {
+    "id": 11,
+    "title": "Game of Thrones",
+    "description": "Noble houses battle for power over the Seven Kingdoms while an ancient evil awakens beyond the Wall."
+}]

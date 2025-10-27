@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>WatchList</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+	<link href="styles/reset.css" rel="stylesheet" />
+	<link href="styles/index.css" rel="stylesheet" />
+	<script src="scripts/card.js" defer></script>
+	<script src="scripts/dialog.js" defer></script>
+	<script src="scripts/section.js" defer></script>
+	<script src="scripts/api.js" defer></script>
+	<script src="scripts/init.js" defer></script>
+</head>
+
+<body>
+	<header class="panel">
+		<h1 class="logo">WATCHLIST</h1>
+		<nav class="sidebar__nav">
+			<ul>
+				<li><a href="#movies">Movies</a></li>
+				<li><a href="#serials">Serials</a></li>
+				<li><a href="#doramas">Doramas</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="content">
+		<button id="add-card-btn">+</button>
+
+		<section id="movies" class="section">
+			<h2 class="chapter">Movies</h2>
+			<div class="cards" id="movies-list"></div>
+		</section>
+
+		<section id="serials" class="section">
+			<h2 class="chapter">Serials</h2>
+			<div class="cards" id="serials-list"></div>
+		</section>
+
+		<section id="doramas" class="section">
+			<h2 class="chapter">Doramas</h2>
+			<div class="cards" id="doramas-list"></div>
+		</section>
+
+		<dialog id="add-modal" class="modal__window">
+			<i class="fa-solid fa-xmark modal__close_btn"></i>
+			<form class="modal__form">
+
+				<div class="modal__text">
+					<label class="modal__title">Title</label>
+					<input class="modal__in__title" type="text" placeholder="Enter a title..." />
+					<label class="modal__description">Description</label>
+					<textarea class="modal__in__description" placeholder="Enter a description..."></textarea>
+				</div>
+				<div class="modal__buttons">
+					<button class="modal__cancel" type="reset">Cancel</button>
+					<button class="modal__add" type="submit">Add</button>
+				</div>
+			</form>
+		</dialog>
+	</main>
+
+</body>
+
+</html>

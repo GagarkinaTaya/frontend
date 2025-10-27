@@ -1,0 +1,48 @@
+.content {
+    padding: 50px 350px;
+}
+
+.active_section {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 8px 15px;
+}
+
+.chapter {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #fc3468;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    transform-origin: center;
+}
+
+.chapter:hover {
+    transform: scale(1.1);
+}
+
+
+#add-card-btn {
+    position: fixed;
+    right: 50px;
+    width: 60px;   
+    height: 60px;
+    border-radius: 50%;
+    background-color: #1e1e1e;
+    color: rgb(154, 156, 158);
+    font-size: 36px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: 0.2s;
+}
+
+#add-card-btn:hover {
+    background-color: #1e1e1e;
+    transform: scale(1.1);
+}
+
+
+/* подвал?
++сами карточки
+подумать над изначальной страницей гет стартед */
