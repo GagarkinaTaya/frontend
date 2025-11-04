@@ -48,7 +48,7 @@ async function showSection(currentHash) {
         e.stopPropagation();
         menu.classList.toggle('visible');
       });
-
+      // две карточки одинаковые добавляются исправиться
       document.addEventListener('click', (event) => {
         if (!card.contains(event.target)) {
           menu.classList.remove('visible');

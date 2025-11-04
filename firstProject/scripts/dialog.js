@@ -1,36 +1,52 @@
 // import { addCard } from './card.js';
+//обработки ошибок добавить
+try {
+    const addCardBtn = document.getElementById('add-card-btn');
+    const modal = document.getElementById('add-modal');
+    const cancelButton = document.querySelector('.modal__cancel');
+    const closeButton = document.querySelector('.modal__close_btn');
+    const form = document.querySelector('.modal__form');
 
-const addCardBtn = document.getElementById('add-card-btn');
-const modal = document.getElementById('add-modal');
+    if (!addCardBtn || !modal || !cancelButton || !closeButton || !form) {
+        throw new Error('Error!!!');
+    }
 
-addCardBtn.addEventListener('click', () => {
-    modal.showModal();
-});
+    addCardBtn.addEventListener('click', () => {
+        modal.showModal();
+    });
 
-const cancelButton = document.querySelector('.modal__cancel');
-const closeButton = document.querySelector('.modal__close_btn');
-cancelButton.addEventListener('click', () => {
-    modal.close();
-});
-closeButton.addEventListener('click', () => {
-    modal.close();
-});
+    cancelButton.addEventListener('click', () => {
+        modal.close();
+    });
+    closeButton.addEventListener('click', () => {
+        modal.close();
+    });
 
-const form = document.querySelector('.modal__form');
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
 
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
+        try {
+            const titleText = document.querySelector('.modal__in__title')?.value.trim();
+            const descriptionText = document.querySelector('.modal__in__description')?.value.trim();
 
-    const titleText = document.querySelector('.modal__in__title').value;
-    const descriptionText = document.querySelector('.modal__in__description').value;
+            if (!titleText || !descriptionText) return;
 
-    if (!titleText || !descriptionText) return;
+            if (typeof addCard !== 'function') {
+                throw new Error('Errorrr');
+            }
 
-    addCard(titleText, descriptionText);
+            addCard(titleText, descriptionText);
 
-    form.reset();
-    modal.close();
-});
+            form.reset();
+            modal.close();
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    });
+} catch (error) {
+    console.error('Error:', error);
+}
+
 
 
 // const addButton = document.querySelector('.modal__add');

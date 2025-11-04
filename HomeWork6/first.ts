@@ -23,3 +23,5 @@ const response: ApiResponse<User> = {
     status: 200,
     message: "successfully pupupuuu"
 }
+
+console.log(response);
