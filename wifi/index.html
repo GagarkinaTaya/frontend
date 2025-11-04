@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Интерактивная карта Wi-Fi сети</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Интерактивная карта Wi-Fi сети</h1>
+            <div class="controls">
+                <button id="toggleAll">Показать все подсказки</button>
+                <button id="pulseBtn">Импульс сети</button>
+            </div>
+        </header>
+
+        <main class="network" id="network">
+            <div class="router" id="router" title="Роутер (Wi-Fi 6)">📡</div>
+
+            <!-- Устройства -->
+            <div class="device" id="laptop" data-name="Ноутбук" data-std="802.11ac" data-freq="5 ГГц"
+                data-speed="до 1300 Мбит/с" style="top:10%; left:45%;">💻
+                <div class="info"></div>
+            </div>
+
+            <div class="device" id="phone" data-name="Смартфон" data-std="802.11ax (Wi-Fi 6)" data-freq="2.4/5 ГГц"
+                data-speed="до 9600 Мбит/с" style="top:70%; left:80%;">📱
+                <div class="info"></div>
+            </div>
+
+            <div class="device" id="camera" data-name="Камера" data-std="802.11n" data-freq="2.4 ГГц"
+                data-speed="до 300 Мбит/с" style="top:75%; left:10%;">🎥
+                <div class="info"></div>
+            </div>
+
+            <div class="device" id="printer" data-name="Принтер" data-std="802.11g" data-freq="2.4 ГГц"
+                data-speed="до 54 Мбит/с" style="top:25%; left:80%;">🖨️
+                <div class="info"></div>
+            </div>
+
+            <!-- Линии будут вставлены динамически -->
+        </main>
+
+        <footer>
+            <small>Демо для лабораторной работы.</small>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

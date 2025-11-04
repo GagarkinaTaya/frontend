@@ -1,0 +1,107 @@
+:root{
+  --bg1: #eef4ff;
+  --bg2: #cfd9f5;
+  --accent: #4a7aff;
+  --card: #ffffff;
+  --muted: #666;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family: "Segoe UI", Roboto, Arial, sans-serif;background: radial-gradient(circle at center,var(--bg1),var(--bg2));color:#222}
+.wrapper{max-width:980px;margin:20px auto;padding:14px}
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;gap:12px}
+h1{font-size:20px;margin:0}
+.controls{display:flex;gap:8px}
+button{
+  background:var(--accent);color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:600;
+  box-shadow:0 4px 12px rgba(74,122,255,0.18);
+}
+button:active{transform:translateY(1px)}
+.network{
+  position:relative;
+  width:700px;height:700px;
+  max-width:100%;aspect-ratio:1;
+  margin:0 auto;border-radius:50%;
+  background: radial-gradient(circle at 40% 30%, rgba(255,255,255,0.6), rgba(255,255,255,0) 40%);
+  overflow:visible;padding:20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+/* Router */
+.router{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:120px;height:120px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--card);border:3px solid var(--accent);
+  font-size:36px;
+  box-shadow: 0 10px 30px rgba(74,122,255,0.18);
+}
+
+/* Devices */
+.device{
+  position:absolute;width:90px;height:90px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:32px;background:var(--card);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  cursor:pointer;transition:transform .18s, box-shadow .18s;
+  user-select:none;
+}
+.device:hover{transform:scale(1.08);box-shadow:0 12px 28px rgba(0,0,0,0.16)}
+
+/* Tooltip card */
+.info{
+  position:absolute;left:50%;bottom:-110%;transform:translateX(-50%);
+  width:220px;max-width:260px;background:var(--card);border-radius:10px;padding:10px;font-size:13px;
+  border:1px solid rgba(0,0,0,0.06);box-shadow:0 8px 20px rgba(0,0,0,0.12);display:none;text-align:center;
+}
+.device.show .info{display:block}
+
+/* Small text styling inside info */
+.info b{display:block;margin-bottom:6px;font-weight:700}
+.info .muted{color:var(--muted);font-size:12px;margin-top:6px}
+
+/* Lines (absolute elements created by JS) */
+/* .line {
+  position:absolute;
+  width:2px;
+  background: linear-gradient(180deg, rgba(74,122,255,0.95), rgba(74,122,255,0.2));
+  transform-origin: top center;
+  border-radius:2px;
+  opacity:0.7;
+  pointer-events:none;
+  transition:opacity .25s, transform .25s;
+} */
+
+.line {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        rgba(74, 122, 255, 0.95) 0%, 
+        rgba(74, 122, 255, 0.4) 70%, 
+        rgba(74, 122, 255, 0) 100%
+    );
+    transform-origin: left center;
+    border-radius: 2px;
+    opacity: 0.75;
+    pointer-events: none;
+    transition: opacity 0.3s ease, width 0.4s ease;
+    width: 0; /* начальная длина */
+}
+
+/* pulse animation class */
+.pulse {
+  animation: pulseGlow 900ms ease-in-out 1;
+}
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(74,122,255,0.3); transform: scaleY(1); }
+  50% { box-shadow: 0 0 20px 6px rgba(74,122,255,0.12); transform: scaleY(1.02); }
+  100% { box-shadow: 0 0 0 0 rgba(74,122,255,0); transform: scaleY(1); }
+}
+
+footer{margin-top:12px;text-align:center;color:var(--muted);font-size:13px}
+@media (max-width:760px){
+  .info{bottom:-125%;left:50%;font-size:12px}
+  .router{width:96px;height:96px;font-size:28px}
+  .device{width:72px;height:72px;font-size:24px}
+}
